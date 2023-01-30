@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index-form.js" defer></script>
+    <link rel="stylesheet" href="index-form.css">
+</head>
+<body>
+      <form id="myForm">
+        <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" class="error"></span>
+        </div>
+        
+        <div class="field">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" required>
+        <span id="ageError" class="error"></span>
+    </div>
+        <div class="field">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError" class="error">dd</span>
+    </div>
+        <div class="field">
+        <label for="verifyEmail">Verify E-mail:</label>
+        <input type="email" id="verifyEmail" name="verifyEmail" required>
+        <span id="verifyEmailError" class="error">dd</span>
+    </div>
+        <div class="field">
+        <label for="city">City:</label>
+        <select id="city" name="city" required>
+          <option value="">Select a city</option>
+          <option value="Athens">Athens</option>
+          <option value="Thessaloniki">Thessaloniki</option>
+          <!-- Add other Greek cities here -->
+        </select>
+        <span id="cityError" class="error">dd</span>
+    </div>
+        <div class="field">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+        <span id="phoneNumberError" class="error">ddd</span>
+    </div>
+        <div class="field">
+        <label>Areas of Interest:</label>
+        <input type="checkbox" name="areaOfInterest" value="construction">Construction
+        <input type="checkbox" name="areaOfInterest" value="research">Research
+        <input type="checkbox" name="areaOfInterest" value="interviews">Interviews
+        <input type="checkbox" name="areaOfInterest" value="traveling">Traveling
+    </div>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      <script>
+        document.getElementById("myForm").addEventListener("submit", validateForm);
+    </script>
+</body>
+</html>
+
